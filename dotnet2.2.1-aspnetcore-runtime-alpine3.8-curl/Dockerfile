@@ -5,7 +5,7 @@ RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/testing >>/etc/apk/repositor
 ENV CURL_VERSION 7.50.1
 
 RUN apk add --update --no-cache openssl openssl-dev ca-certificates
-RUN apk add --update --no-cache --virtual curldeps g++ make perl && \
+RUN apk add --update --no-cache --virtual curldeps g++ make perl krb5-dev libgss libgss-dev && \
     wget https://curl.haxx.se/download/curl-$CURL_VERSION.tar.bz2 && \
     tar xjvf curl-$CURL_VERSION.tar.bz2 && \
     rm curl-$CURL_VERSION.tar.bz2 && \
