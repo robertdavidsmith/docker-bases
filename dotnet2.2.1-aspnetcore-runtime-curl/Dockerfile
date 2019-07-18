@@ -1,6 +1,7 @@
 FROM microsoft/dotnet:2.2.1-aspnetcore-runtime
 
-ENV CURL_VERSION 7.50.1
+#ENV CURL_VERSION 7.50.1
+ENV CURL_VERSION 7.46.0
 
 RUN apt-get update && \
     apt-get -y install wget bzip2 openssl  ca-certificates libgss-dev && \
