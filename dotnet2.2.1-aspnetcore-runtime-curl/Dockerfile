@@ -22,9 +22,11 @@ RUN apt-get update && \
     make && \
     make install && \
     cd / && \
-    rm -r curl-$CURL_VERSION
+    rm -r curl-$CURL_VERSION && \
+    apt-get remove -y wget bzip2 make perl g++ && \
+    apt-get clean -y
 
 #RUN addgroup -g 1000 -S appuser && adduser -u 1000 -S appuser -G appuser
 #USER appuser
 
-CMD ["curl"]
+CMD ["dotnet"]
