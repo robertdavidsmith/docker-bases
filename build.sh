@@ -30,5 +30,14 @@ aws s3api put-object --bucket ${BUCKET_NAME} --body ${TAR_FILE} --key ${KEY}
 echo Give public read perms on bucket...
 aws s3api put-object-acl --bucket ${BUCKET_NAME} --key ${KEY} --acl public-read
 
+echo ${BUCKET_NAME} ${KEY}
+
+
+
 echo Done
 
+# todo add tags
+# Custodian: roberts
+# Owner: cpe
+# Created by: roberts
+# Attribution: cpe
